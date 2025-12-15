@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه تلگرام</title>
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            direction: rtl; /* برای بهتر دیده شدن متن فارسی */
+        }
+
+        /* استایل عکس اصلی (بالای صفحه) */
+        .image-container {
+            width: 100%;
+            height: 80vh; /* 80 درصد ارتفاع صفحه */
+            background-image: url('https://abrehamrahi.ir/o/public/0WzqaQGC/');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* استایل بخش تلگرام (پایین صفحه) */
+        .telegram-section {
+            width: 100%; /* پهن شدن در کل صفحه */
+            height: 20vh; /* پر کردن ۲۰ درصد باقی مانده */
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* شروع از سمت راست */
+            background-color: #0088cc;
+            padding: 0 20px; /* اضافه کردن پدینگ افقی برای فضای بیشتر */
+            box-sizing: border-box; /* اطمینان از اینکه پدینگ به عرض اضافه نشود */
+            color: white;
+        }
+
+        .telegram-logo {
+            width: 50px; /* اندازه بزرگتر برای لوگو */
+            height: 50px;
+            margin-left: 20px; /* فاصله از سمت چپ */
+            order: 3; /* قرارگیری در سمت چپ (به دلیل direction: rtl) */
+        }
+
+        .telegram-text {
+            font-family: 'Lalezar', cursive;
+            font-size: 30px; /* بزرگتر شدن فونت */
+            font-weight: bold;
+            margin-right: 20px; /* فاصله از لبه راست */
+            order: 1; /* قرارگیری در سمت راست */
+        }
+
+        .telegram-link {
+            color: white;
+            font-weight: bold;
+            font-size: 24px; /* اندازه بزرگتر برای آیدی */
+            text-decoration: none;
+            flex-grow: 1; /* اجازه رشد برای پر کردن فضای میانی */
+            text-align: center; /* مرکز قرار گرفتن لینک در فضای باقی مانده */
+            order: 2; /* قرارگیری در وسط */
+        }
+
+        .telegram-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="image-container"></div>
+
+    <div class="telegram-section">
+        <div class="telegram-text">
+            تلگرام
+        </div>
+        <a href="https://t.me/Fm_bq" class="telegram-link" target="_blank">@Fm_bq</a>
+
+        <img src="https://cdn.pixabay.com/photo/2021/12/27/10/50/telegram-6896827_1280.png" alt="لوگوی تلگرام" class="telegram-logo">
+    </div>
+
+</body>
+</html>
