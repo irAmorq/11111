@@ -10,58 +10,56 @@
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
-            direction: rtl; /* برای بهتر دیده شدن متن فارسی */
+            direction: rtl;
         }
 
         /* استایل عکس اصلی (بالای صفحه) */
         .image-container {
             width: 100%;
-            height: 80vh; /* 80 درصد ارتفاع صفحه */
+            height: 80vh;
             background-image: url('https://abrehamrahi.ir/o/public/0WzqaQGC/');
             background-size: cover;
             background-position: center;
         }
 
-        /* استایل بخش تلگرام (پایین صفحه) */
-        .telegram-section {
-            width: 100%; /* پهن شدن در کل صفحه */
-            height: 20vh; /* پر کردن ۲۰ درصد باقی مانده */
+        /* استایل دکمه تلگرام (پایین صفحه) */
+        .telegram-button {
+            width: 100%;
+            height: 20vh;
             display: flex;
             align-items: center;
-            justify-content: flex-start; /* شروع از سمت راست */
+            justify-content: center;
             background-color: #0088cc;
-            padding: 0 20px; /* اضافه کردن پدینگ افقی برای فضای بیشتر */
-            box-sizing: border-box; /* اطمینان از اینکه پدینگ به عرض اضافه نشود */
+            padding: 0 30px;
+            box-sizing: border-box;
             color: white;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+            position: relative;
         }
 
-        .telegram-logo {
-            width: 50px; /* اندازه بزرگتر برای لوگو */
-            height: 50px;
-            margin-left: 20px; /* فاصله از سمت چپ */
-            order: 3; /* قرارگیری در سمت چپ (به دلیل direction: rtl) */
+        .telegram-button:hover {
+            background-color: #006699;
+        }
+
+        .telegram-button:active {
+            background-color: #005580;
         }
 
         .telegram-text {
             font-family: 'Lalezar', cursive;
-            font-size: 30px; /* بزرگتر شدن فونت */
+            font-size: 32px;
             font-weight: bold;
-            margin-right: 20px; /* فاصله از لبه راست */
-            order: 1; /* قرارگیری در سمت راست */
-        }
-
-        .telegram-link {
             color: white;
-            font-weight: bold;
-            font-size: 24px; /* اندازه بزرگتر برای آیدی */
-            text-decoration: none;
-            flex-grow: 1; /* اجازه رشد برای پر کردن فضای میانی */
-            text-align: center; /* مرکز قرار گرفتن لینک در فضای باقی مانده */
-            order: 2; /* قرارگیری در وسط */
         }
 
-        .telegram-link:hover {
-            text-decoration: underline;
+        .telegram-logo {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            left: 30px;
         }
     </style>
 
@@ -71,14 +69,14 @@
 
     <div class="image-container"></div>
 
-    <div class="telegram-section">
-        <div class="telegram-text">
-            تلگرام
-        </div>
-        <a href="https://t.me/Fm_bq" class="telegram-link" target="_blank">@Fm_bq</a>
-
-        <img src="https://cdn.pixabay.com/photo/2021/12/27/10/50/telegram-6896827_1280.png" alt="لوگوی تلگرام" class="telegram-logo">
-    </div>
+    <a href="https://t.me/Fm_bq" class="telegram-button" target="_blank">
+        <div class="telegram-text">تلگرام</div>
+        
+        <!-- لوگوی تلگرام سفید -->
+        <svg class="telegram-logo" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.751-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.141.121.1.154.234.17.33.015.096.034.314.019.484z"/>
+        </svg>
+    </a>
 
 </body>
 </html>
