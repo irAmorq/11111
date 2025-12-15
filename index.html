@@ -10,40 +10,38 @@
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
         }
 
-        /* استایل عکس اصلی (بالای صفحه) */
-        .image-container {
-            width: 100%;
-            height: 80vh; /* 80 درصد ارتفاع صفحه */
-            background-image: url('https://abrehamrahi.ir/o/public/0WzqaQGC/');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        /* استایل بخش تلگرام (پایین صفحه) */
+        /* استایل بخش تلگرام */
         .telegram-section {
-            position: absolute;
-            left: 10px;
-            bottom: 10px;
             display: flex;
             align-items: center;
             background-color: #0088cc;
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
-            color: white;
+            width: 80%;
+            max-width: 600px;
+            justify-content: space-between;
         }
 
+        /* استایل تصویر تلگرام */
         .telegram-logo {
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
         }
 
+        /* استایل متن تلگرام */
         .telegram-text {
             font-family: 'Lalezar', cursive;
-            font-size: 20px;
-            margin-right: 10px;
+            font-size: 30px;
+            color: white;
+            margin-right: 20px;
             font-weight: bold;
         }
 
@@ -63,16 +61,13 @@
 </head>
 <body>
 
-    <!-- بخش تصویر اصلی -->
-    <div class="image-container"></div>
-
     <!-- بخش تلگرام -->
     <div class="telegram-section">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Telegram_logo_2019.svg/1280px-Telegram_logo_2019.svg.png" alt="تلگرام" class="telegram-logo">
+        <img src="https://cdn.pixabay.com/photo/2021/12/27/10/50/telegram-6896827_1280.png" alt="تلگرام" class="telegram-logo">
         <div class="telegram-text">
             تلگرام
         </div>
-        <a href="https://t.me/Fm_bq" class="telegram-link" target="_blank">https://t.me/llRANIl</a>
+        <a href="https://t.me/Fm_bq" class="telegram-link" target="_blank">@Fm_bq</a>
     </div>
 
 </body>
